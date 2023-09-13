@@ -7,5 +7,5 @@ dash-html-components==2.0.0
 dash-table==5.0.0
 gunicorn==21.2.0
 numpy
-pandas==2.1.0
+pandas
 plotly==5.16.1
