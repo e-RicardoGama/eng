@@ -22,10 +22,10 @@ layout = dbc.Col([
                 dbc.CardGroup([
                     dbc.Card([
                         html.H5("Prev Acum"),
-                        html.H6(id='prev-acum-fisico',style={'font-size':'20px'}),
+                        html.H6(id='prev-acum-fisico', style={'font-size':'20px'}),
                     ], style={"padding-left": "20px", "padding-top": "10px"}),
                     dbc.Card(
-                        html.Div(className="fa fa-percent d-inline", style={'font-size': '40px'}),
+                        html.Div(className="fa fa-percent d-inline", style=card_icon),
                         color="primary",
                         style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
                     )
@@ -36,10 +36,10 @@ layout = dbc.Col([
                 dbc.CardGroup([
                     dbc.Card([
                         html.H5("Real Acum"),
-                        html.H6(id='real-acum-fisico',style={'font-size':'20px'}),
+                        html.H6(id='real-acum-fisico', style={'font-size':'20px'}),
                     ], style={"padding-left": "20px", "padding-top": "10px"}),
                     dbc.Card(
-                        html.Div(className="fa fa-percent d-inline", style={'font-size': '40px'}),
+                        html.Div(className="fa fa-percent d-inline", style=card_icon),
                         color="success",
                         style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
                     )
@@ -50,10 +50,10 @@ layout = dbc.Col([
                 dbc.CardGroup([
                     dbc.Card([
                         html.H5("Desvio"),
-                        html.H6(id='desvio', style={'font-size': '20px'}),
+                        html.H6(id='desvio', style={'font-size':'20px'}),
                     ], style={"padding-left": "20px", "padding-top": "10px"}),
                     dbc.Card(
-                        html.Div(className="fa fa-percent d-inline", style={'font-size': '40px'}),
+                        html.Div(className="fa fa-percent d-inline", style=card_icon),
                         color="primary",
                         style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
                     )
@@ -77,7 +77,7 @@ layout = dbc.Col([
                         html.H6(id="previsto-mensal-fisico", style={'font-size':'20px'}),
                     ], style={"padding-left": "20px", "padding-top": "10px"}),
                     dbc.Card(
-                        html.Div(className="fa fa-percent d-inline", style={'font-size': '40px'}),
+                        html.Div(className="fa fa-percent d-inline", style=card_icon),
                         color="primary",
                         style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
                     )
@@ -87,10 +87,10 @@ layout = dbc.Col([
                 dbc.CardGroup([
                     dbc.Card([
                         html.H5("Real Mensal"),
-                        html.H6(id="realizado-mensal-fisico",style={'font-size':'20px'}),
+                        html.H6(id="realizado-mensal-fisico", style={'font-size':'20px'}),
                         ], style={"padding-left": "20px", "padding-top": "10px"}),
                     dbc.Card(
-                        html.Div(className="fa fa-percent d-inline", style={'font-size': '40px'}),
+                        html.Div(className="fa fa-percent d-inline", style=card_icon),
                         color="success",
                         style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
                     )
@@ -103,7 +103,7 @@ layout = dbc.Col([
                         html.H6(id='desvio-mes', style={'font-size':'20px'}),
                     ], style={'padding-left':'20px','padding-top':'10px'}),
                     dbc.Card(
-                        html.Div(className="fa fa-percent d-inline", style={'font-size': '40px'}),
+                        html.Div(className="fa fa-percent d-inline", style=card_icon),
                         color='primary',
                         style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
                     )
