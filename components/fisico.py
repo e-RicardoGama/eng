@@ -172,7 +172,7 @@ def imprimir_medicao_mes(data):
     fig1.update_layout(title='Prev x Real Acumulado',
                              xaxis_title='Mes/Ano',
                              yaxis_title='%')
-    fig1.update_layout(legend=dict(x=0, y=-0.2))
+    fig1.update_layout(legend=dict(x=0, y=-0.4))
 
     fig = go.Figure()
     fig.add_trace(go.Bar(x=df2['Mes/Ano'], y=df2['Prev Mensal'],
@@ -186,7 +186,7 @@ def imprimir_medicao_mes(data):
                        xaxis_title='Mes/Ano',
                        yaxis_title='%')
     fig.update_layout(margin=dict(l=30, r=30, t=30, b=30))
-    fig.update_layout(legend=dict(x=0, y=-0.3))
+    fig.update_layout(legend=dict(x=0, y=-0.4))
 
     return fig1, fig
 
