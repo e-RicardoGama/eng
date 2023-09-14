@@ -131,7 +131,6 @@ def imprimir_medicao_mes(data):
     df = df.round(2)
     df = df.drop_duplicates()
     df = df.fillna('')
-    df.to_csv('df_fis.csv')
 
     orc = pd.read_csv('orc.csv',index_col=0)
     orc['Início'] = pd.to_datetime(orc['Início'])
@@ -208,7 +207,6 @@ def atualizar_indicadores(data):
     df = df.round(2)
     df = df.drop_duplicates()
     df = df.fillna('')
-    df.to_csv('df_fis.csv')
 
     orc = pd.read_csv('orc.csv', index_col=0)
     orc['Início'] = pd.to_datetime(orc['Início'])
