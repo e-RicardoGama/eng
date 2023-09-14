@@ -4,7 +4,6 @@ import dash_bootstrap_components as dbc
 import plotly.graph_objects as go
 from globals import *
 from app import app
-import locale
 
 card_icon = {
     "color": "white",
@@ -14,10 +13,6 @@ card_icon = {
 }
 
 graph_margin=dict(l=25, r=25, t=25, b=0)
-
-# ==================Localização
-# Defina a localização para o formato brasileiro
-locale.setlocale(locale.LC_ALL, 'pt_BR.utf8')
 
 # =========  Layout  =========== #
 layout = dbc.Col([
@@ -75,19 +70,6 @@ layout = dbc.Col([
             dbc.Col([
                 dbc.CardGroup([
                     dbc.Card([
-                        html.H5('Custo Obra'),
-                        html.H6(id='custo-obra', style={'font-size':'25px'}),
-                    ], style={"padding-left": "20px", "padding-top": "10px"}),
-                    dbc.Card(
-                        html.Div(className="fas fa-dollar-sign", style=card_icon),
-                        color='primary',
-                        style={"maxWidth": 75, "height": 100, "margin-left": "-10px"},
-                    )
-                ])
-            ],lg=4,sm=12),
-            dbc.Col([
-                dbc.CardGroup([
-                    dbc.Card([
                         html.H5("Prev Mensal"),
                         html.H6(id="previsto-mensal-fisico", style={'font-size':'25px'}),
                     ], style={"padding-left": "20px", "padding-top": "10px"}),
@@ -109,6 +91,19 @@ layout = dbc.Col([
                         style={"maxWidth": 75, "height": 100, "margin-left": "-10px"},
                     )])
                 ], lg=4,sm=6),
+            dbc.Col([
+                dbc.CardGroup([
+                    dbc.Card([
+                        html.H5('Desvio Mensal'),
+                        html.H6(id='desvio-mes', style={'font-size':'25px'}),
+                    ], style={'padding-left':'20px','padding-top':'10px'}),
+                    dbc.Card(
+                        html.Div(className="fa fa-percent", style=card_icon),
+                        color='primary',
+                        style={'maxWidth':75, 'height':100,'margin-left':'-10px'},
+                    )
+                ])
+            ],lg=4,sm=6),
 
         ], style={"margin": "10px"}),
         dbc.Row([
@@ -199,9 +194,9 @@ def imprimir_medicao_mes(data):
         Output('prev-acum-fisico', 'children'),
         Output('real-acum-fisico', 'children'),
         Output('desvio','children'),
-        Output('custo-obra','children'),
         Output('previsto-mensal-fisico', 'children'),
         Output('realizado-mensal-fisico', 'children'),
+        Output('desvio-mes','children'),
     ],
     Input('store-fis', 'data')
 )
@@ -234,8 +229,6 @@ def atualizar_indicadores(data):
     df2 = pd.merge(plan_fis, df1, on='Mes/Ano', how='outer')
     df2 = df2.fillna('')
 
-    custo_obra_formatado = ''
-
     card = df2.copy()
     card['Real Acum'] = pd.to_numeric(card['Real Acum'], errors='coerce')
     filtro = card['Real Acum'] > 0
@@ -245,17 +238,17 @@ def atualizar_indicadores(data):
         previsto_acum = 0
         real_acumulado = 0
         desvio = 0
-        custo_obra = 0
         previsto_mensal = 0
         realizado_mensal = 0
+        desvio_mes = 0
     else:
         previsto_acum = df_card['Prev Acum'].iloc[-1]
         real_acumulado = df_card['Real Acum'].iloc[-1]
         desvio = ((real_acumulado - previsto_acum) / previsto_acum) * 100
         desvio = round(desvio, 2)  # Limitar a duas casas decimais
-        custo_obra = orc['Total'].sum()
-        custo_obra_formatado = locale.format('%1.2f', custo_obra, grouping=True)
         previsto_mensal = df_card['Prev Mensal'].iloc[-1]
         realizado_mensal = df_card['% Real'].iloc[-1]
+        desvio_mes = ((realizado_mensal - previsto_mensal)/previsto_mensal) * 100
+        desvio_mes = round(desvio_mes,2)
 
-    return previsto_acum, real_acumulado, desvio, custo_obra_formatado, previsto_mensal, realizado_mensal
+    return previsto_acum, real_acumulado, desvio, previsto_mensal, realizado_mensal, desvio_mes
