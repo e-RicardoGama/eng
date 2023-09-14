@@ -8,7 +8,7 @@ from app import app
 card_icon = {
     "color": "white",
     "textAlign": "center",
-    "fontSize": 30,
+    "fontSize": 25,
     "margin": "auto",
 }
 
@@ -22,7 +22,7 @@ layout = dbc.Col([
                 dbc.CardGroup([
                     dbc.Card([
                         html.H5("Prev Acum"),
-                        html.H6(id='prev-acum-fisico',style={'font-size':'25px'}),
+                        html.H6(id='prev-acum-fisico',style={'font-size':'20px'}),
                     ], style={"padding-left": "20px", "padding-top": "10px"}),
                     dbc.Card(
                         html.Div(className="fa fa-percent", style=card_icon),
@@ -35,7 +35,7 @@ layout = dbc.Col([
                 dbc.CardGroup([
                     dbc.Card([
                         html.H5("Real Acum"),
-                        html.H6(id='real-acum-fisico',style={'font-size':'25px'}),
+                        html.H6(id='real-acum-fisico',style={'font-size':'20px'}),
                     ], style={"padding-left": "20px", "padding-top": "10px"}),
                     dbc.Card(
                         html.Div(className="fa fa-percent", style=card_icon),
@@ -48,7 +48,7 @@ layout = dbc.Col([
                 dbc.CardGroup([
                     dbc.Card([
                         html.H5("Desvio"),
-                        html.H6(id='desvio', style={'font-size': '25px'}),
+                        html.H6(id='desvio', style={'font-size': '20px'}),
                     ], style={"padding-left": "20px", "padding-top": "10px"}),
                     dbc.Card(
                         html.Div(className="fa fa-percent", style=card_icon),
@@ -71,7 +71,7 @@ layout = dbc.Col([
                 dbc.CardGroup([
                     dbc.Card([
                         html.H5("Prev Mensal"),
-                        html.H6(id="previsto-mensal-fisico", style={'font-size':'25px'}),
+                        html.H6(id="previsto-mensal-fisico", style={'font-size':'20px'}),
                     ], style={"padding-left": "20px", "padding-top": "10px"}),
                     dbc.Card(
                         html.Div(className="fa fa-percent", style=card_icon),
@@ -83,7 +83,7 @@ layout = dbc.Col([
                 dbc.CardGroup([
                     dbc.Card([
                         html.H5("Real Mensal"),
-                        html.H6(id="realizado-mensal-fisico",style={'font-size':'25px'}),
+                        html.H6(id="realizado-mensal-fisico",style={'font-size':'20px'}),
                         ], style={"padding-left": "20px", "padding-top": "10px"}),
                     dbc.Card(
                         html.Div(className="fa fa-percent", style=card_icon),
@@ -95,7 +95,7 @@ layout = dbc.Col([
                 dbc.CardGroup([
                     dbc.Card([
                         html.H5('Desvio Mensal'),
-                        html.H6(id='desvio-mes', style={'font-size':'25px'}),
+                        html.H6(id='desvio-mes', style={'font-size':'20px'}),
                     ], style={'padding-left':'20px','padding-top':'10px'}),
                     dbc.Card(
                         html.Div(className="fa fa-percent", style=card_icon),
@@ -172,20 +172,21 @@ def imprimir_medicao_mes(data):
     fig1.update_layout(title='Prev x Real Acumulado',
                              xaxis_title='Mes/Ano',
                              yaxis_title='%')
+    fig1.update_layout(legend=dict(x=0, y=-0.2))
 
     fig = go.Figure()
     fig.add_trace(go.Bar(x=df2['Mes/Ano'], y=df2['Prev Mensal'],
                          name='Prev Mensal',
                          marker_color='black'))
     fig.add_trace(go.Bar(x=df2['Mes/Ano'], y=df2['% Real'],
-                         name='% Real',
+                         name='Real Mensal',
                          marker_color='indianred'))
     fig.update_layout(barmode='group', xaxis_tickangle=-45)
     fig.update_layout(title='Prev x Real Mensal',
                        xaxis_title='Mes/Ano',
                        yaxis_title='%')
     fig.update_layout(margin=dict(l=30, r=30, t=30, b=30))
-
+    fig.update_layout(legend=dict(x=0, y=-0.3))
 
     return fig1, fig
 
