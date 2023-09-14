@@ -27,7 +27,7 @@ layout = dbc.Col([
                     dbc.Card(
                         html.Div(className="fa fa-percent d-inline", style=card_icon),
                         color="primary",
-                        style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
+#                        style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
                     )])
                 ], lg=4,sm=12),
             # Real Acum
@@ -40,7 +40,7 @@ layout = dbc.Col([
                     dbc.Card(
                         html.Div(className="fa fa-percent d-inline", style=card_icon),
                         color="success",
-                        style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
+#                        style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
                     )])
                 ], lg=4,sm=12),
             # Desvio
@@ -53,7 +53,7 @@ layout = dbc.Col([
                     dbc.Card(
                         html.Div(className="fa fa-percent d-inline", style=card_icon),
                         color="primary",
-                        style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
+#                        style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
                     )])
             ], lg=4, sm=12),
         ], style={"margin": "10px"}),
@@ -76,7 +76,7 @@ layout = dbc.Col([
                     dbc.Card(
                         html.Div(className="fa fa-percent d-inline", style=card_icon),
                         color="primary",
-                        style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
+#                        style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
                     )])
                 ], lg=4, sm=12),
             dbc.Col([
@@ -88,7 +88,7 @@ layout = dbc.Col([
                     dbc.Card(
                         html.Div(className="fa fa-percent d-inline", style=card_icon),
                         color="success",
-                        style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
+#                        style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
                     )])
                 ], lg=4,sm=12),
             dbc.Col([
@@ -100,7 +100,7 @@ layout = dbc.Col([
                     dbc.Card(
                         html.Div(className="fa fa-percent d-inline", style=card_icon),
                         color='primary',
-                        style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
+#                        style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
                     )
                 ])
             ],lg=4,sm=12),
