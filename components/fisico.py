@@ -25,9 +25,9 @@ layout = dbc.Col([
                         html.H6(id='prev-acum-fisico',style={'font-size':'20px'}),
                     ], style={"padding-left": "20px", "padding-top": "10px"}),
                     dbc.Card(
-                        html.Div(className="fa fa-percent d-inline", style=card_icon),
+                        html.Div(className="fa fa-percent d-inline", style={'font-size': '40px'}),
                         color="primary",
-#                        style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
+                        style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
                     )])
                 ], lg=4,sm=12),
             # Real Acum
@@ -38,9 +38,9 @@ layout = dbc.Col([
                         html.H6(id='real-acum-fisico',style={'font-size':'20px'}),
                     ], style={"padding-left": "20px", "padding-top": "10px"}),
                     dbc.Card(
-                        html.Div(className="fa fa-percent d-inline", style=card_icon),
+                        html.Div(className="fa fa-percent d-inline", style={'font-size': '40px'}),
                         color="success",
-#                        style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
+                        style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
                     )])
                 ], lg=4,sm=12),
             # Desvio
@@ -51,9 +51,9 @@ layout = dbc.Col([
                         html.H6(id='desvio', style={'font-size': '20px'}),
                     ], style={"padding-left": "20px", "padding-top": "10px"}),
                     dbc.Card(
-                        html.Div(className="fa fa-percent d-inline", style=card_icon),
+                        html.Div(className="fa fa-percent d-inline", style={'font-size': '40px'}),
                         color="primary",
-#                        style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
+                        style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
                     )])
             ], lg=4, sm=12),
         ], style={"margin": "10px"}),
@@ -74,9 +74,9 @@ layout = dbc.Col([
                         html.H6(id="previsto-mensal-fisico", style={'font-size':'20px'}),
                     ], style={"padding-left": "20px", "padding-top": "10px"}),
                     dbc.Card(
-                        html.Div(className="fa fa-percent d-inline", style=card_icon),
+                        html.Div(className="fa fa-percent d-inline", style={'font-size': '40px'}),
                         color="primary",
-#                        style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
+                        style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
                     )])
                 ], lg=4, sm=12),
             dbc.Col([
@@ -86,9 +86,9 @@ layout = dbc.Col([
                         html.H6(id="realizado-mensal-fisico",style={'font-size':'20px'}),
                         ], style={"padding-left": "20px", "padding-top": "10px"}),
                     dbc.Card(
-                        html.Div(className="fa fa-percent d-inline", style=card_icon),
+                        html.Div(className="fa fa-percent d-inline", style={'font-size': '40px'}),
                         color="success",
-#                        style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
+                        style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
                     )])
                 ], lg=4,sm=12),
             dbc.Col([
@@ -98,9 +98,9 @@ layout = dbc.Col([
                         html.H6(id='desvio-mes', style={'font-size':'20px'}),
                     ], style={'padding-left':'20px','padding-top':'10px'}),
                     dbc.Card(
-                        html.Div(className="fa fa-percent d-inline", style=card_icon),
+                        html.Div(className="fa fa-percent d-inline", style={'font-size': '40px'}),
                         color='primary',
-#                        style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
+                        style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
                     )
                 ])
             ],lg=4,sm=12),
