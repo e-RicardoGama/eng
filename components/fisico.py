@@ -29,7 +29,7 @@ layout = dbc.Col([
                         color="primary",
                         style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
                     )])
-                ], lg=4,sm=4),
+                ], lg=4,sm=12),
             # Real Acum
             dbc.Col([
                 dbc.CardGroup([
@@ -42,7 +42,7 @@ layout = dbc.Col([
                         color="success",
                         style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
                     )])
-                ], lg=4,sm=4),
+                ], lg=4,sm=12),
             # Desvio
             dbc.Col([
                 dbc.CardGroup([
@@ -55,7 +55,7 @@ layout = dbc.Col([
                         color="primary",
                         style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
                     )])
-            ], lg=4, sm=4),
+            ], lg=4, sm=12),
         ], style={"margin": "10px"}),
         dbc.Row([
             dbc.Col([
@@ -78,7 +78,7 @@ layout = dbc.Col([
                         color="primary",
                         style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
                     )])
-                ], lg=4, sm=4),
+                ], lg=4, sm=12),
             dbc.Col([
                 dbc.CardGroup([
                     dbc.Card([
@@ -90,7 +90,7 @@ layout = dbc.Col([
                         color="success",
                         style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
                     )])
-                ], lg=4,sm=4),
+                ], lg=4,sm=12),
             dbc.Col([
                 dbc.CardGroup([
                     dbc.Card([
@@ -103,7 +103,7 @@ layout = dbc.Col([
                         style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
                     )
                 ])
-            ],lg=4,sm=4),
+            ],lg=4,sm=12),
 
         ], style={"margin": "10px"}),
         dbc.Row([
