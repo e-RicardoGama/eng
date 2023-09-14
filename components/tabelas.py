@@ -4,7 +4,6 @@ import dash_bootstrap_components as dbc
 from globals import *
 from app import app
 from dash import dash_table
-import locale
 from datetime import datetime
 
 
@@ -16,10 +15,6 @@ card_icon = {
 }
 
 graph_margin=dict(l=25, r=25, t=25, b=0)
-
-# ==================Localização
-# Defina a localização para o formato brasileiro
-locale.setlocale(locale.LC_ALL, 'pt_BR.utf8')
 
 # =========  Layout  =========== #
 layout = dbc.Col([
