@@ -3,7 +3,7 @@ from dash import html
 
 # ======= Layout ===========
 layout = html.Div([
-    html.H1("Sobre a Plataforma", style={'textAlign': 'center'}),
+    html.H1("Sobre a Plataforma", style={'textAlign': 'left'}),
 
     html.H2("Descrição"),
     html.P("Bem-vindo a nossa plataforma de gestão de prazos de obras! "
@@ -36,10 +36,10 @@ layout = html.Div([
         html.P("4: Lance o percentual acumulado, NÃO USE VÍRGULAS, quando necessário separe por PONTO, ex: 90.5"),
         ], style={'flex': '1'}),
         ], style={'display': 'flex', 'justify-content': 'space-between'}),
-    html.H2("Resultado"),
+    html.H2("Resultados"),
     html.P("Após cada lançamento, automaticamente todos os gráficos e planilhas são atualizados com esses valores."),
     html.Li('Percentual Previsto e Realizado Mensal.'),
-    html.Li('Precentual Previsto e Realizado Acumulado.'),
+    html.Li('Percentual Previsto e Realizado Acumulado.'),
     html.Li('Desvio do Projeto.'),
     html.Li('Relatórios no formato de tabelas, indicando o status do projeto, e ações necessárias para manter o projeto conforme planejado.'),
 ], style={'margin': '25px'})
