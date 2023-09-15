@@ -24,11 +24,6 @@ layout = dbc.Col([
                         html.H5("Prev Acum"),
                         html.H6(id='prev-acum-fisico', style={'font-size':'20px'}),
                     ], style={"padding-left": "20px", "padding-top": "10px"}),
-                    dbc.Card(
-                        html.Div(className="fa fa-percent d-inline", style=card_icon),
-                        color="primary",
-                        style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
-                    )
                 ])
                 ], lg=4,sm=12),
             # Real Acum
@@ -38,11 +33,6 @@ layout = dbc.Col([
                         html.H5("Real Acum"),
                         html.H6(id='real-acum-fisico', style={'font-size':'20px'}),
                     ], style={"padding-left": "20px", "padding-top": "10px"}),
-                    dbc.Card(
-                        html.Div(className="fa fa-percent d-inline", style=card_icon),
-                        color="success",
-                        style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
-                    )
                 ])
                 ], lg=4,sm=12),
             # Desvio
@@ -52,11 +42,6 @@ layout = dbc.Col([
                         html.H5("Desvio"),
                         html.H6(id='desvio', style={'font-size':'20px'}),
                     ], style={"padding-left": "20px", "padding-top": "10px"}),
-                    dbc.Card(
-                        html.Div(className="fa fa-percent d-inline", style=card_icon),
-                        color="primary",
-                        style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
-                    )
                 ])
             ], lg=4, sm=12),
         ], style={"margin": "10px"}),
@@ -76,11 +61,6 @@ layout = dbc.Col([
                         html.H5("Prev Mensal"),
                         html.H6(id="previsto-mensal-fisico", style={'font-size':'20px'}),
                     ], style={"padding-left": "20px", "padding-top": "10px"}),
-                    dbc.Card(
-                        html.Div(className="fa fa-percent d-inline", style=card_icon),
-                        color="primary",
-                        style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
-                    )
                 ])
                 ], lg=4, sm=12),
             dbc.Col([
@@ -89,11 +69,6 @@ layout = dbc.Col([
                         html.H5("Real Mensal"),
                         html.H6(id="realizado-mensal-fisico", style={'font-size':'20px'}),
                         ], style={"padding-left": "20px", "padding-top": "10px"}),
-                    dbc.Card(
-                        html.Div(className="fa fa-percent d-inline", style=card_icon),
-                        color="success",
-                        style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
-                    )
                 ])
                 ], lg=4,sm=12),
             dbc.Col([
@@ -102,11 +77,6 @@ layout = dbc.Col([
                         html.H5('Desvio Mensal'),
                         html.H6(id='desvio-mes', style={'font-size':'20px'}),
                     ], style={'padding-left':'20px','padding-top':'10px'}),
-                    dbc.Card(
-                        html.Div(className="fa fa-percent d-inline", style=card_icon),
-                        color='primary',
-                        style={'maxWidth': '75px', 'height': '100px', 'margin-left': '-10px'},
-                    )
                 ])
             ],lg=4,sm=12),
 
@@ -257,4 +227,11 @@ def atualizar_indicadores(data):
         desvio_mes = ((realizado_mensal - previsto_mensal)/previsto_mensal) * 100
         desvio_mes = round(desvio_mes,2)
 
-    return previsto_acum, real_acumulado, desvio, previsto_mensal, realizado_mensal, desvio_mes
+        previsto_acum_str = f'{previsto_acum}%'
+        real_acumulado_str = f'{real_acumulado}%'
+        desvio_str = f'{desvio}%'
+        previsto_mensal_str = f'{previsto_mensal}%'
+        realizado_mensal_str = f'{realizado_mensal}%'
+        desvio_mes_str = f'{desvio_mes}%'
+
+    return previsto_acum_str, real_acumulado_str, desvio_str, previsto_mensal_str, realizado_mensal_str, desvio_mes_str

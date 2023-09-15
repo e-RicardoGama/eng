@@ -85,7 +85,7 @@ layout = dbc.Card([
             [
                 dbc.NavLink('Status Obra', href='/fisico', active='exact'),
                 dbc.NavLink("Relatórios - Planilhas", href="/tabelas", active="exact"),
-                dbc.NavLink('Sobre o aplicativo', href='/sobre',active='exact'),
+                dbc.NavLink('Sobre a plataforma', href='/sobre',active='exact'),
             ], vertical=True, pills=True, id='nav_buttons', style={"margin-bottom": "50px", "margin-top": "20px"}),
         ], style={'margin-top': '10px'}, id='sidebar_completa')
 

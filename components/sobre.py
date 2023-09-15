@@ -3,14 +3,14 @@ from dash import html
 
 # ======= Layout ===========
 layout = html.Div([
-    html.H1("Sobre o Aplicativo", style={'textAlign': 'center'}),
+    html.H1("Sobre a Plataforma", style={'textAlign': 'center'}),
 
     html.H2("Descrição"),
-    html.P("Bem-vindo ao nosso aplicativo de gestão de prazos de obras! "
-           "Este aplicativo foi projetado para ajudá-lo a acompanhar e gerenciar os prazos de suas obras de forma eficiente."),
+    html.P("Bem-vindo a nossa plataforma de gestão de prazos de obras! "
+           "Esta plataforma foi projetada para ajudá-lo a acompanhar e gerenciar os prazos de suas obras de forma eficiente."),
 
     html.H2("Recursos Principais"),
-    html.P("Nosso aplicativo oferece uma série de recursos que podem facilitar o gerenciamento de suas obras, "
+    html.P("A plataforma oferece uma série de recursos que podem facilitar o gerenciamento de suas obras, "
            "incluindo:"),
     html.Ul([
         html.Li("Acompanhamento detalhado dos prazos de cada etapa da obra."),
@@ -21,7 +21,7 @@ layout = html.Div([
         html.Li("Permite o lançamento de medições diárias, semanais e etc."),
         # Adicione mais itens conforme necessário.
     ]),
-    html.H2("Como usar o aplicativo"),
+    html.H2("Como usar a plataforma"),
     html.Div([
         html.Div([
         html.P("Basta clicar no botão 'Lançar Medições':", style={'text-align': 'left'}),

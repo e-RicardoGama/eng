@@ -11,7 +11,7 @@ df_plan_fis = df_plan_fis.round(2)
 
 
 if ('df_fis.csv' in os.listdir()):
-    df_fis = pd.read_csv('df_fis.csv',index_col=0,parse_dates=True)
+    df_fis = pd.read_csv('df_fis.csv',index_col=0,parse_dates=True, date_format='%Y-%m-%d')
     df_fis['Data'] = pd.to_datetime(df_fis['Data'])
     df_fis['Data'] = df_fis['Data'].apply(lambda x: x.date())
 
