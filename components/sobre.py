@@ -18,7 +18,8 @@ layout = html.Div([
         html.Li("Gráficos de acompanhamento mensal e acumulado."),
         html.Li("Relatório do projeto com percentual acumulado executado."),
         html.Li("Relatório de medições."),
-        html.Li("Permite o lançamento de medições diárias, semanais e etc."),
+        html.Li("Permite o lançamento de medições diárias, semanais, quinzenais, mensais ou de acordo com sua necessidade."),
+        html.Li("Todas as medições são fechadas mensalmente com os valores acumulados.")
         # Adicione mais itens conforme necessário.
     ]),
     html.H2("Como usar a plataforma"),
@@ -30,10 +31,10 @@ layout = html.Div([
     ], style={'display': 'flex', 'justify-content': 'space-between'}),
     html.Div([
         html.Div([
-        html.P("1: Selecione a atividade,"),
-        html.P("2: Informe a data da medição,"),
-        html.P("3: Informe o número da medição,"),
-        html.P("4: Lance o percentual acumulado, NÃO USE VÍRGULAS, quando necessário separe por PONTO, ex: 90.5"),
+        html.P("1- Selecione a atividade,"),
+        html.P("2- Informe a data da medição,"),
+        html.P("3- Informe o número da medição,"),
+        html.P("4- Lance o percentual acumulado, NÃO USE VÍRGULAS, e quando necessário separe por PONTO, ex: 90.5"),
         ], style={'flex': '1'}),
         ], style={'display': 'flex', 'justify-content': 'space-between'}),
     html.H2("Resultados"),
