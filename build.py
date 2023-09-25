@@ -32,12 +32,12 @@ app.layout = dbc.Container(children=[
     [Input("url", "pathname")])
 
 def render_page_content(pathname):
-    if pathname == "/" or pathname == "/fisico":
-        return fisico.layout
-    if pathname == "/tabelas":
+    if pathname == "/" or pathname == "/tabelas":
         return tabelas.layout
+    if pathname == "/fisico":
+        return fisico.layout
     if pathname == "/sobre":
         return sobre_layout
 
 if __name__ == '__main__':
-    app.run_server(debug=False)
+    app.run_server(debug=True)

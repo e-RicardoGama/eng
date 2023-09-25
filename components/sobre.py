@@ -6,43 +6,42 @@ layout = html.Div([
     html.H1("Sobre a Plataforma", style={'textAlign': 'left'}),
 
     html.H2("Descrição"),
-    html.P("Bem-vindo a nossa plataforma de gestão de prazos de obras! "
-           "Esta plataforma foi projetada para ajudá-lo a acompanhar e gerenciar os prazos de suas obras de forma eficiente."),
+    html.P("Bem-vindo a plataforma projetada para auxiliar no acompanhamento e gerenciamento dos prazos de suas obras de maneira eficiente."),
 
     html.H2("Recursos Principais"),
-    html.P("A plataforma oferece uma série de recursos que podem facilitar o gerenciamento de suas obras, "
-           "incluindo:"),
     html.Ul([
         html.Li("Acompanhamento detalhado dos prazos de cada etapa da obra."),
-        html.Li("Gráficos e visualizações para analisar o progresso da obra."),
-        html.Li("Gráficos de acompanhamento mensal e acumulado."),
-        html.Li("Relatório do projeto com percentual acumulado executado."),
+        html.Li("Gráficos para analisar o progresso da obra."),
+        html.Li("Gráficos para acompanhamento: mensal e acumulado."),
+        html.Li("Relatórios do projeto com percentual acumulado executado."),
         html.Li("Relatório de medições."),
-        html.Li("Permite o lançamento de medições diárias, semanais, quinzenais, mensais ou de acordo com sua necessidade."),
-        html.Li("Todas as medições são fechadas mensalmente com os valores acumulados.")
+        html.Li("Permite o lançamento de medições diárias, semanais, quinzenais, mensais."),
+        html.Li("Medições com valores acumulados: fechamentos mensais.")
         # Adicione mais itens conforme necessário.
     ]),
+
+    html.H2("Resultados atualizados após medições"),
+    html.Ul([
+        html.Li('Percentual Previsto e Realizado Mensal.'),
+        html.Li('Percentual Previsto e Realizado Acumulado.'),
+        html.Li('Desvio do Projeto.'),
+        html.Li('Relatórios: status do projeto e ações para manutenção do projeto conforme planejado.'),
+    ]),
+
     html.H2("Como usar a plataforma"),
     html.Div([
         html.Div([
         html.P("Basta clicar no botão 'Lançar Medições':", style={'text-align': 'left'}),
         ], style={'flex': '1'}),
-
     ], style={'display': 'flex', 'justify-content': 'space-between'}),
     html.Div([
         html.Div([
         html.P("1- Selecione a atividade,"),
         html.P("2- Informe a data da medição,"),
         html.P("3- Informe o número da medição,"),
-        html.P("4- Lance o percentual acumulado, NÃO USE VÍRGULAS, e quando necessário separe por PONTO, ex: 90.5"),
+        html.P("4- Lançar o percentual acumulado separados por PONTO ( . ), ex: 90.5, 35.5"),
         ], style={'flex': '1'}),
         ], style={'display': 'flex', 'justify-content': 'space-between'}),
-    html.H2("Resultados"),
-    html.P("Após cada lançamento, automaticamente todos os gráficos e planilhas são atualizados com esses valores."),
-    html.Li('Percentual Previsto e Realizado Mensal.'),
-    html.Li('Percentual Previsto e Realizado Acumulado.'),
-    html.Li('Desvio do Projeto.'),
-    html.Li('Relatórios no formato de tabelas, indicando o status do projeto, e ações necessárias para manter o projeto conforme planejado.'),
 ], style={'margin': '25px'})
 
 

@@ -7,14 +7,20 @@ from globals import *
 
 # ========= Layout ========= #
 layout = dbc.Card([
-        html.Img(src=r'assets/buid.png', className='perfil_avatar',
-                style={'background-color': 'transparent', 'border-color': 'transparent'}),
-        html.Legend("Gestão de Prazos nas Obras", className="text-primary",
-                style={'margin-top':'10px'}),
-        dbc.Button("Visite o Site", href="https://www.rgama.net/", target="_blank",style={'margin-top':'10px'}),
+dbc.Row([
+        dbc.Col([
+            html.Img(src=r'assets/buid.png', className='perfil_avatar',
+                    style={'background-color': 'transparent', 'border-color': 'transparent'}),
+            ],width=4),
+        dbc.Col([
+            html.H5("Gestão de Prazos nas Obras", className="text-primary",
+                    style={'margin-top':'10px'}),
+            ],width=8),
+            ]),
+    dbc.Row([
+            dbc.Button("Visite o Site", href="https://www.rgama.net/", target="_blank",style={'margin-top':'10px'}),
+            ]),
         html.Hr(),
-
-
 
 # Seção + NOVO ------------------------
         dbc.Row([
@@ -83,8 +89,8 @@ layout = dbc.Card([
         html.H5('Selecione a página', className='text-primary'),
         dbc.Nav(
             [
-                dbc.NavLink('Status Obra', href='/fisico', active='exact'),
-                dbc.NavLink("Relatórios - Planilhas", href="/tabelas", active="exact"),
+                dbc.NavLink('Relatórios - Planilhas', href='/tabelas', active='exact'),
+                dbc.NavLink("Gráficos", href="/fisico", active="exact"),
                 dbc.NavLink('Sobre a plataforma', href='/sobre',active='exact'),
             ], vertical=True, pills=True, id='nav_buttons', style={"margin-bottom": "50px", "margin-top": "20px"}),
         ], style={'margin-top': '10px'}, id='sidebar_completa')

@@ -130,7 +130,7 @@ def imprimir_medicao_mes(data):
 
 
     # Definindo as cores desejadas
-    cor_real_acum = 'red'  # Cinza
+    cor_real_acum = '#91D9CD'  # Cinza
     cor_prev_acum = 'black'  # Preto
 
     fig1 = go.Figure()
@@ -155,7 +155,7 @@ def imprimir_medicao_mes(data):
                          marker_color='black'))
     fig.add_trace(go.Bar(x=df2['Mes/Ano'], y=df2['% Real'],
                          name='Real Mensal',
-                         marker_color='indianred'))
+                         marker_color='#91D9CD'))
     fig.update_layout(barmode='group', xaxis_tickangle=-45)
     fig.update_layout(title='Prev x Real Mensal',
                        xaxis_title='Mes/Ano',
